@@ -18,6 +18,7 @@ def main():
         return arg1 / arg3
     if arg2 == '%':
         return arg1 % arg3
+    return "Please enter a valid operand"
 
 
 
