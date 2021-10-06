@@ -10,14 +10,14 @@ def main():
 
     if arg2 == '+':
         return arg1 + arg3
-    elif arg2 == '-':
+    if arg2 == '-':
         return arg1 - arg3
-    elif arg2 == '*':
+    if arg2 == '*':
         return arg1 * arg3
-
-
-
-
+    if arg2 == '/':
+        return arg1 / arg3
+    if arg2 == '%':
+        return arg1 % arg3
 
 
 
