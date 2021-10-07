@@ -4,11 +4,17 @@ import os
 
 def start():
     """returns the right message"""
-    FLASK_ENV= ["development", "production"]
-    if os.environ['FLASK_ENV'] == "development" or os.environ['FLASK_ENV'] == "production":
+    if os.environ.get('FLASK_ENV') == "development":
         return "Starting in development mode..."
+    if os.environ.get('FLASK_ENV') == "production":
+        return "Starting in production mode..."
 
     return "Starting in production mode..."
+
+
+
+
+
 
 if __name__ == "__main__":
     print(start())
