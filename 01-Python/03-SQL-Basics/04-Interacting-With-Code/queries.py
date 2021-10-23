@@ -46,13 +46,12 @@ def love_movies(db):
 
 def directors_named_like_count(db, name):
     # return the number of directors which contain a given word in their name
-    query = '''
+    query = """
             SELECT COUNT(*)
             FROM directors
-            WHERE upper(directors.name) like ?
-            '''
-    db = conn.cursor()
-    db.execute(query, (f'%{name}%',))
+            WHERE directors.name like ?
+            """
+    db.execute(query, (f"%{name}%",))
     results = db.fetchone()
     return results[0]
 

@@ -34,7 +34,7 @@ def stats_on(db, genre_name):
         SELECT
             movies.genres,
             COUNT(*),
-            ROUND(AVG(movies.minutes),2)
+            ROUND(AVG(movies.minutes))
         FROM movies
         WHERE movies.genres = ?
     """

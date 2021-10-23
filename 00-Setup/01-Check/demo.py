@@ -1,6 +1,8 @@
 """Dummy challenge for Kitt Demo"""
 
 
-
+import math
 def circle_area(radius):
-    return 3.14 * (radius ** 2) if radius > 0 else 0
+    if radius > 0:
+        return radius * radius * math.pi
+    return 0
