@@ -1,23 +1,31 @@
+import math
+import statistics
+
+
 def my_mean(samples):
     '''returns the mean of the observations'''
-    pass  # YOUR CODE HERE
+    return sum(samples)/ (len(samples))
+
 
 
 def my_standard_deviation(samples):
     '''returns the standard deviation of the observations'''
-    pass  # YOUR CODE HERE
-
+    result = 0
+    for i in range(len(samples)):
+        subtotal = (my_mean(samples) - samples[i]) ** 2
+        result += subtotal
+    return (result/((len(samples)-1))) ** 0.5
 
 def my_mode(samples):
     '''returns the mode of the observations'''
-    pass  # YOUR CODE HERE
+    return statistics.mode(samples)
 
 
 def my_multimodes(samples):
     '''returns the modes of the observations as a sorted list'''
-    pass  # YOUR CODE HERE
+    return statistics.multimode(samples)
 
 
 def my_median(samples):
     '''returns the median of the observations'''
-    pass  # YOUR CODE HERE
+    return statistics.median(samples)
